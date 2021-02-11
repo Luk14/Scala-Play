@@ -1,0 +1,27 @@
+@import play.api.i18n.Messages.implicitMessagesProviderToMessages
+@(items: Seq[models.Item], form: Form[Item])
+
+
+@main("Items") {
+
+    <h1>Items</h1>
+    <table>
+        <thead>
+            <tr><th>ID</th><th>Name</th><th>Price</th></tr>
+        </thead>
+        <tbody>
+            @for(it <- items) {
+                <tr><td>@it.id</td><td>@it.name</td><td>@it.price</td></tr>
+            }
+        </tbody>
+    </table>
+    </br>
+    @helper.form(routes.ItemController.createForm) {
+        <div>
+            @helper.inputText(form("id"))
+            @helper.inputText(form("name"))
+            @helper.inputText(form("price"))
+        </div>
+    }
+
+}
