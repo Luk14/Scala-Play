@@ -19,7 +19,7 @@ To get a local copy up and running follow these simple steps.
 
 ## 🚀 Deployment
     
-    Onee the file has been created, it can be deployed to a Server. 
+    Once the file has been created, it can be deployed to a Server. 
     
 ## ⛏️ Testing
 
